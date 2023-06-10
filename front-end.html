@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UK Economic Growth Dashboard</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2d4263;
+        }
+        #tableauViz {
+            width: 1100px;
+            height: 750px;
+        }
+    </style>
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+</head>
+<body>
+    <div id="tableauViz"></div>
+
+    <script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("tableauViz");
+            var url = "https://public.tableau.com/views/MainDashboard_16862685539640/MainDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link";
+            var options = {
+                hideToolbar: true
+            };
+            var viz = new tableau.Viz(containerDiv, url, options);
+        }
+
+        document.addEventListener("DOMContentLoaded", initViz);
+    </script>
+</body>
+</html>
